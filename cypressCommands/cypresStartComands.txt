@@ -1,0 +1,16 @@
+npm install cypress
+//instalacja Cypress
+
+
+npx cypress open
+
+/// otwiera dany projekt
+
+npx cypress run -b chrome --headed
+ 
+/// otwiera projekt w chrome
+
+
+PLIK REFERENCYJNY DLA vsc
+
+/// <reference types="cypress"/>
