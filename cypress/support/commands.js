@@ -1,24 +1,9 @@
-import { LoginPage } from "../pages/Login";
-import { HomePage } from "../pages/HomePage";
-
-describe("EDu goIT global testing", () => {
-  it("login and logout test", () => {
-    const homePage = new HomePage();
-    const loginPage = new LoginPage();
-
-    homePage.navigate();
-
-    loginPage.getLoginInput().type("user888@gmail.com");
-    loginPage.getPasswordInput().type("1234567890");
-    loginPage.getLoginButton().click();
-
-    homePage.getMainMenuButton().click();
-    homePage.getFoundLogoutButton().click();
-    homePage.getClickLogoutButton().click();
-  });
+Cypress.Commands.add("login", (username, password) => {
+  cy.get("#signin_button").click();
+  cy.get("#user_login").type(username);
+  cy.get("#user_password").type(password);
+  cy.get(".btn-primary").click();
 });
-
-//
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
