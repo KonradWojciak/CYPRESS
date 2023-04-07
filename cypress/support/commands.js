@@ -7,11 +7,11 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-Cypress.Commands.add("login", (testowyqa@AbstractRangeqa.team, QA!automation-1) {
-cy.get("#user_email").type("testowyqa@qa.team")
-cy.get("#user_password").type("QA!automation-1")
-cy.get(".css-1jphuq5").click()
-}),
+Cypress.Commands.add("login", (login, password) => {
+  cy.get("#user_email").type(login);
+  cy.get("#user_password").type(password);
+  cy.get(".css-1jphuq5").click();
+});
 //
 //
 // -- This is a parent command --
